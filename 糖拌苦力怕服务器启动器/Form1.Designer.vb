@@ -120,7 +120,7 @@ Partial Class Form1
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(570, 50)
         Me.TextBox1.TabIndex = 12
-        Me.TextBox1.Text = "java -Xincgc -Xms128m -Xmx2000m -XX:+AggressiveOpts -XX:+UseCompressedOops -XX:Ma" &
+        Me.TextBox1.Text = "java -Xincgc -Xms128m -Xmx2048m -XX:+AggressiveOpts -XX:+UseCompressedOops -XX:Ma" &
     "xPermSize=256M -XX:PermSize=64MB -Dfile.encoding=UTF-8 -server -jar server.jar  " &
     "-nojline"
         '

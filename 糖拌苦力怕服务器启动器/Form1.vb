@@ -1,5 +1,6 @@
 ﻿Public Class Form1
     Dim time_run As Long
+    Dim open_done As Boolean = False
     Private _process As Process = Nothing
     Dim psi As New ProcessStartInfo()
     Private Delegate Sub AddMessageHandler(ByVal msg As String)
@@ -34,6 +35,7 @@
         End If
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        open_done = True
         '启动 cmd.exe
         psi.FileName = "cmd.exe"
         psi.Arguments = "/c @ECHO OFF &&" & TextBox1.Text
@@ -50,11 +52,15 @@
         _process.BeginOutputReadLine()
     End Sub
     Private Sub Form1_Closing(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
-        _process.StandardInput.WriteLine("stop")
-        MsgBox("程序关闭，服务器将自动停止运行",, "关闭提示")
-        _process.Close()
+        If (open_done) Then
+            _process.StandardInput.WriteLine("stop")
+            MsgBox("程序关闭，服务器将自动停止运行",, "关闭提示")
+            _process.Close()
+        End If
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         _process.StandardInput.WriteLine("stop")
     End Sub
+
+
 End Class
