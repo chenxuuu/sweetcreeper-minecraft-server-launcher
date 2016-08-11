@@ -38,7 +38,6 @@ Partial Class Form1
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
@@ -148,12 +147,12 @@ Partial Class Form1
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(379, 21)
         Me.TextBox5.TabIndex = 15
-        Me.TextBox5.Text = "eco give * 1;tm abc 发钱啦！;protect chunk unload"
+        Me.TextBox5.Text = "eco give * 1;tm abc Get your money!;protect chunk unload"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 132)
+        Me.Label2.Location = New System.Drawing.Point(14, 132)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(263, 12)
         Me.Label2.TabIndex = 16
@@ -174,23 +173,11 @@ Partial Class Form1
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(379, 21)
         Me.TextBox6.TabIndex = 18
-        Me.TextBox6.Text = "eco give * 888;tm bc 整点发钱！"
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Checked = True
-        Me.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox1.Location = New System.Drawing.Point(438, 87)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(144, 16)
-        Me.CheckBox1.TabIndex = 19
-        Me.CheckBox1.Text = "使用UTF8编码发送指令"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.TextBox6.Text = "eco give * 888;tm bc Get many money!"
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(588, 100)
+        Me.Button4.Location = New System.Drawing.Point(588, 102)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 23)
         Me.Button4.TabIndex = 20
@@ -202,9 +189,9 @@ Partial Class Form1
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(284, 87)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(89, 12)
+        Me.Label4.Size = New System.Drawing.Size(221, 12)
         Me.Label4.TabIndex = 21
-        Me.Label4.Text = "发送实时命令："
+        Me.Label4.Text = "发送实时命令：（中文不支持UTF8编码）"
         '
         'TextBox7
         '
@@ -257,7 +244,6 @@ Partial Class Form1
         Me.Controls.Add(Me.TextBox7)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.TextBox6)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -296,7 +282,6 @@ Partial Class Form1
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents Button4 As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents TextBox7 As TextBox
