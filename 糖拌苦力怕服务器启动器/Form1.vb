@@ -151,7 +151,9 @@
 
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        _process.StandardInput.WriteLine("stop")
+        If (open_done) Then
+            _process.StandardInput.WriteLine("stop")
+        End If
     End Sub
 
 
