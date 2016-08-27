@@ -45,6 +45,7 @@ Partial Class Form1
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Process1 = New System.Diagnostics.Process()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -119,9 +120,7 @@ Partial Class Form1
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(570, 50)
         Me.TextBox1.TabIndex = 12
-        Me.TextBox1.Text = "java -Xincgc -Xms128m -Xmx2048m -XX:+AggressiveOpts -XX:+UseCompressedOops -XX:Ma" &
-    "xPermSize=256M -XX:PermSize=64MB -Dfile.encoding=UTF-8 -server -jar server.jar  " &
-    "-nojline"
+        Me.TextBox1.Text = resources.GetString("TextBox1.Text")
         '
         'TextBox2
         '
@@ -147,7 +146,7 @@ Partial Class Form1
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(379, 21)
         Me.TextBox5.TabIndex = 15
-        Me.TextBox5.Text = "eco give * 1;tm abc Get your money!;protect chunk unload"
+        Me.TextBox5.Text = "eco give * 1;tm abc 鍦ㄧ嚎鍙戦挶;protect chunk unload"
         '
         'Label2
         '
@@ -173,7 +172,7 @@ Partial Class Form1
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(379, 21)
         Me.TextBox6.TabIndex = 18
-        Me.TextBox6.Text = "eco give * 888;tm bc Get many money!"
+        Me.TextBox6.Text = "eco give * 888;tm bc 鏁寸偣鍙戦挶!!!"
         '
         'Button4
         '
@@ -233,12 +232,22 @@ Partial Class Form1
         Me.Process1.StartInfo.UserName = ""
         Me.Process1.SynchronizingObject = Me
         '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(340, 440)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.TabIndex = 25
+        Me.Button5.Text = "清空log"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(677, 464)
+        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.TextBox7)
@@ -289,4 +298,5 @@ Partial Class Form1
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Process1 As Process
+    Friend WithEvents Button5 As Button
 End Class
